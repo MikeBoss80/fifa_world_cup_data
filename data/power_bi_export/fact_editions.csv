@@ -1,0 +1,23 @@
+year,host,champion,runner_up,third_place,fourth_place,teams,matches,goals,goals_per_match,attendance,host_won,decade,edition_id
+1930,Uruguay,Uruguay,Argentina,United States,Serbia,13,18,70,3.89,590549,False,1930,1
+1934,Italy,Italy,Czechia,Germany,Austria,16,17,70,4.12,363000,True,1930,2
+1938,France,Italy,Hungary,Brazil,Sweden,15,18,84,4.67,375700,True,1930,3
+1950,Brazil,Uruguay,Brazil,Sweden,Spain,13,22,88,4.0,1045246,False,1950,4
+1954,Switzerland,Germany,Hungary,Austria,Uruguay,16,26,140,5.38,768607,False,1950,5
+1958,Sweden,Brazil,Sweden,France,Germany,16,35,126,3.6,819810,False,1950,6
+1962,Chile,Brazil,Czechia,Chile,Serbia,16,32,89,2.78,893172,False,1960,7
+1966,England,England,Germany,Portugal,Russia,16,32,89,2.78,1563135,True,1960,8
+1970,Mexico,Brazil,Italy,Germany,Uruguay,16,32,95,2.97,1603975,False,1970,9
+1974,West Germany,Germany,Netherlands,Poland,Brazil,16,38,97,2.55,1865753,True,1970,10
+1978,Argentina,Argentina,Netherlands,Brazil,Italy,16,38,102,2.68,1545791,True,1970,11
+1982,Spain,Italy,Germany,Poland,France,24,52,146,2.81,1766277,False,1980,12
+1986,Mexico,Argentina,Germany,France,Belgium,24,52,132,2.54,2394031,False,1980,13
+1990,Italy,Germany,Argentina,Italy,England,24,52,115,2.21,2516215,False,1990,14
+1994,United States,Brazil,Italy,Sweden,Bulgaria,24,52,141,2.71,3587538,False,1990,15
+1998,France,France,Brazil,Croatia,Netherlands,32,64,171,2.67,2785100,True,1990,16
+2002,South Korea / Japan,Brazil,Germany,Turkey,South Korea,32,64,161,2.52,2705197,False,2000,17
+2006,Germany,Italy,France,Germany,Portugal,32,64,147,2.3,3359439,False,2000,18
+2010,South Africa,Spain,Netherlands,Germany,Uruguay,32,64,145,2.27,3178856,False,2010,19
+2014,Brazil,Germany,Argentina,Netherlands,Brazil,32,64,171,2.67,3429873,False,2010,20
+2018,Russia,France,Croatia,Belgium,England,32,64,169,2.64,3031768,False,2010,21
+2022,Qatar,Argentina,France,Croatia,Morocco,32,64,172,2.69,3404252,False,2020,22
