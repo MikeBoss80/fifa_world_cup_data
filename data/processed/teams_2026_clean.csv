@@ -1,0 +1,49 @@
+team,group,confederation,fifa_rank,coach,best_wc_result,debut_2026,is_debutant,is_champion,best_round_numeric,fifa_rank_category
+Mexico,A,CONCACAF,15,Javier Aguirre,"Quarter-finals (1970,1986)",No,False,False,3,High
+South Africa,A,CAF,60,Hugo Broos,"Group stage (1998,2002,2010)",No,False,False,1,Medium
+South Korea,A,AFC,25,Hong Myung-bo,Semi-finals (2002),No,False,False,4,High
+Czechia,A,UEFA,41,Ivan Hasek,"Runner-up (1934,1962)",No,False,False,5,Medium
+Canada,B,CONCACAF,30,Jesse Marsch,"Group stage (1986,2022)",No,False,False,1,High
+Switzerland,B,UEFA,19,Murat Yakin,"Quarter-finals (1934,1938,1954)",No,False,False,3,High
+Qatar,B,AFC,35,Marquez Lopez,Group stage (2022),No,False,False,1,Medium
+Bosnia and Herzegovina,B,UEFA,52,Sergej Barbarez,Group stage (2014),No,False,False,1,Medium
+Brazil,C,CONMEBOL,6,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",No,False,True,6,Elite
+Morocco,C,CAF,8,Walid Regragui,Semi-finals (2022),No,False,False,4,Elite
+Haiti,C,CONCACAF,83,Marc Collat,Group stage (1974),No,False,False,1,Low
+Scotland,C,UEFA,47,Steve Clarke,Group stage (multiple),No,False,False,1,Medium
+USA,D,CONCACAF,16,Mauricio Pochettino,Third place (1930),No,False,False,1,High
+Paraguay,D,CONMEBOL,64,Gustavo Alfaro,Quarter-finals (2010),No,False,False,3,Low
+Australia,D,AFC,26,Tony Popovic,"Round of 16 (2006,2022)",No,False,False,2,High
+Türkiye,D,UEFA,42,Vincenzo Montella,Third place (2002),No,False,False,1,Medium
+Germany,E,UEFA,10,Julian Nagelsmann,"Winners (1954,1974,1990,2014)",No,False,True,6,Elite
+Curaçao,E,CONCACAF,81,Dick Advocaat,First appearance,Yes,True,False,0,Low
+Ivory Coast,E,CAF,33,Emerse Faé,"Group stage (2006,2010,2014)",No,False,False,1,Medium
+Ecuador,E,CONMEBOL,24,Sebastián Beccacece,Round of 16 (2006),No,False,False,2,High
+Netherlands,F,UEFA,7,Ronald Koeman,"Runner-up (1974,1978,2010)",No,False,False,5,Elite
+Japan,F,AFC,18,Hajime Moriyasu,"Round of 16 (2002,2010,2018,2022)",No,False,False,2,High
+Sweden,F,UEFA,39,Jon Dahl Tomasson,Runner-up (1958),No,False,False,5,Medium
+Tunisia,F,CAF,40,Faouzi Benzarti,Group stage (6 apps),No,False,False,1,Medium
+Belgium,G,UEFA,9,Domenico Tedesco,Semi-finals (2018),No,False,False,4,Elite
+Egypt,G,CAF,29,Hossam El-Badry,Round of 16 (1934),No,False,False,2,High
+Iran,G,AFC,21,Amir Ghalenoei,Group stage (6 apps),No,False,False,1,High
+New Zealand,G,OFC,95,Darren Bazeley,"Group stage (1982,2010)",No,False,False,1,Low
+Spain,H,UEFA,2,Luis de la Fuente,Winners (2010),No,False,True,6,Elite
+Cape Verde,H,CAF,70,Pedro Brito,First appearance,Yes,True,False,0,Low
+Saudi Arabia,H,AFC,57,Roberto Mancini,Round of 16 (1994),No,False,False,2,Medium
+Uruguay,H,CONMEBOL,17,Marcelo Bielsa,"Winners (1930,1950)",No,False,True,6,High
+France,I,UEFA,1,Didier Deschamps,"Winners (1998,2018)",No,False,True,6,Elite
+Senegal,I,CAF,14,Aliou Cissé,Quarter-finals (2002),No,False,False,3,High
+Norway,I,UEFA,44,Ståle Solbakken,"Round of 16 (1994,1998)",No,False,False,2,Medium
+Iraq,I,AFC,61,Graham Arnold,Group stage (1986),No,False,False,1,Low
+Argentina,J,CONMEBOL,3,Lionel Scaloni,"Winners (1978,1986,2022)",No,False,True,6,Elite
+Algeria,J,CAF,36,Vladimir Petkovic,Round of 16 (2014),No,False,False,2,Medium
+Austria,J,UEFA,23,Ralf Rangnick,Third place (1954),No,False,False,1,High
+Jordan,J,AFC,68,Hussain Ammouta,First appearance,Yes,True,False,0,Low
+Portugal,K,UEFA,5,Roberto Martínez,"Semi-finals (1966,2006)",No,False,False,4,Elite
+DR Congo,K,CAF,51,Sébastien Desabre,Group stage (1974),No,False,False,1,Medium
+Uzbekistan,K,AFC,62,Srecko Katanec,First appearance,Yes,True,False,0,Low
+Colombia,K,CONMEBOL,13,Néstor Lorenzo,Quarter-finals (2014),No,False,False,3,High
+England,L,UEFA,4,Thomas Tuchel,Winners (1966),No,False,True,6,Elite
+Croatia,L,UEFA,11,Zlatko Dalić,Runner-up (2018),No,False,False,5,High
+Ghana,L,CAF,65,Otto Addo,Quarter-finals (2010),No,False,False,3,Low
+Panama,L,CONCACAF,53,Thomas Christiansen,Group stage (2018),No,False,False,1,Medium

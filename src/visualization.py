@@ -92,3 +92,49 @@ def plot_attendance_by_country(df):
     ax.set_title('Total World Cup Attendance by Host Country')
     plt.tight_layout()
     return fig
+
+
+def plot_confederation_evolution(df):
+    conf_map = {
+        'Uruguay': 'CONMEBOL', 'Argentina': 'CONMEBOL', 'United States': 'CONCACAF',
+        'Yugoslavia': 'UEFA', 'Italy': 'UEFA', 'Czechoslovakia': 'UEFA',
+        'Germany': 'UEFA', 'Austria': 'UEFA', 'France': 'UEFA',
+        'Hungary': 'UEFA', 'Brazil': 'CONMEBOL', 'Sweden': 'UEFA',
+        'Spain': 'UEFA', 'England': 'UEFA', 'Portugal': 'UEFA',
+        'Soviet Union': 'UEFA', 'Netherlands': 'UEFA', 'Poland': 'UEFA',
+        'Belgium': 'UEFA', 'Croatia': 'UEFA', 'Turkey': 'UEFA',
+        'South Korea': 'AFC', 'Bulgaria': 'UEFA', 'Russia': 'UEFA',
+        'Morocco': 'CAF', 'Chile': 'CONMEBOL', 'Serbia': 'UEFA',
+        'Peru': 'CONMEBOL', 'Colombia': 'CONMEBOL', 'Cuba': 'CONCACAF',
+        'Korea Rep': 'AFC', 'Saudi Arabia': 'AFC', 'Japan': 'AFC',
+        'Iran': 'AFC', 'Australia': 'AFC', 'Nigeria': 'CAF',
+        'Cameroon': 'CAF', 'Algeria': 'CAF', 'Ghana': 'CAF',
+        'Tunisia': 'CAF', 'Senegal': 'CAF', 'Egypt': 'CAF',
+        'Costa Rica': 'CONCACAF', 'Honduras': 'CONCACAF', 'Mexico': 'CONCACAF',
+        'Panama': 'CONCACAF', 'Canada': 'CONCACAF',
+    }
+    top4_cols = ['champion', 'runner_up', 'third_place', 'fourth_place']
+    rows = []
+    for _, row in df.iterrows():
+        for col in top4_cols:
+            team = row[col]
+            conf = conf_map.get(team, 'Other')
+            rows.append({
+                'year': row['year'], 'decade': row['decade'],
+                'team': team, 'confederation': conf, 'position': col
+            })
+    conf_df = pd.DataFrame(rows)
+    conf_presence = conf_df.groupby(['decade', 'confederation']).size().reset_index(name='count')
+    total_per_decade = conf_df.groupby('decade').size().reset_index(name='total')
+    conf_presence = conf_presence.merge(total_per_decade, on='decade')
+    conf_presence['percentage'] = (conf_presence['count'] / conf_presence['total'] * 100).round(1)
+
+    fig, ax = plt.subplots(figsize=(14, 7))
+    sns.lineplot(data=conf_presence, x='decade', y='percentage',
+                 hue='confederation', marker='o', linewidth=2.5, ax=ax)
+    ax.set_xlabel('Decade')
+    ax.set_ylabel('% of Top 4 Finishes')
+    ax.set_title('Confederation Presence in World Cup Top 4 Over Time')
+    ax.legend(title='Confederation')
+    plt.tight_layout()
+    return fig

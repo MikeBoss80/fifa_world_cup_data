@@ -1,0 +1,139 @@
+// ============================================
+// FIFA WORLD CUP DASHBOARD - DAX MEASURES
+// ============================================
+// Copia y pega estas medidas en Power BI Desktop
+// Crea una tabla de medidas separada
+// ============================================
+
+// ============================================
+// MEDIDAS DE GOLES
+// ============================================
+
+Total Goals = SUM(fact_matches[total_goals])
+
+Total Matches = COUNTROWS(fact_matches)
+
+Avg Goals Per Match = DIVIDE([Total Goals], [Total Matches])
+
+Goals by Decade = 
+CALCULATE(
+    AVERAGE(fact_editions[goals_per_match]),
+    ALLEXCEPT(dim_calendar, dim_calendar[decade])
+)
+
+Goals Trend YoY = 
+VAR CurrentYear = MAX(dim_calendar[year])
+VAR PreviousYear = CurrentYear - 4
+VAR CurrentGoals = CALCULATE(SUM(fact_editions[total_goals]), dim_calendar[year] = CurrentYear)
+VAR PreviousGoals = CALCULATE(SUM(fact_editions[total_goals]), dim_calendar[year] = PreviousYear)
+RETURN DIVIDE(CurrentGoals - PreviousGoals, PreviousGoals)
+
+// ============================================
+// MEDIDAS DE RENDIMIENTO
+// ============================================
+
+Total Editions = COUNTROWS(fact_editions)
+
+Host Wins = COUNTROWS(FILTER(fact_editions, fact_editions[host_won] = TRUE()))
+
+Host Win Rate = DIVIDE([Host Wins], [Total Editions])
+
+Avg Attendance = AVERAGE(fact_editions[total_attendance])
+
+Win Rate by Team = 
+VAR SelectedTeam = SELECTEDVALUE(dim_teams[team_name])
+VAR WinsAsTeam1 = 
+    CALCULATE(
+        COUNTROWS(fact_matches),
+        fact_matches[team1] = SelectedTeam,
+        fact_matches[score1] > fact_matches[score2]
+    )
+VAR WinsAsTeam2 = 
+    CALCULATE(
+        COUNTROWS(fact_matches),
+        fact_matches[team2] = SelectedTeam,
+        fact_matches[score2] > fact_matches[score1]
+    )
+VAR TotalMatches = 
+    CALCULATE(
+        COUNTROWS(fact_matches),
+        fact_matches[team1] = SelectedTeam || fact_matches[team2] = SelectedTeam
+    )
+RETURN DIVIDE(WinsAsTeam1 + WinsAsTeam2, TotalMatches)
+
+Host Win Rate = 
+VAR HostWins = CALCULATE(
+    COUNTROWS(fact_editions),
+    fact_editions[host_won] = TRUE()
+)
+VAR TotalEditions = COUNTROWS(fact_editions)
+RETURN DIVIDE(HostWins, TotalEditions)
+
+Avg Host Position = AVERAGE(fact_editions[host_position])
+
+Top Scorer Goals = MAX(fact_editions[top_scorer_goals])
+
+Avg Goals Per Match Scorer = 
+DIVIDE(
+    SUM(fact_editions[top_scorer_goals]),
+    SUM(fact_editions[matches_count])
+)
+
+// ============================================
+// MEDIDAS DE RENDIMIENTO
+// ============================================
+
+Total Editions = COUNTROWS(fact_editions)
+
+Host Wins = COUNTROWS(FILTER(fact_editions, fact_editions[host_won] = TRUE()))
+
+Host Win Rate = DIVIDE([Host Wins], [Total Editions])
+
+Avg Attendance = AVERAGE(fact_editions[total_attendance])
+
+Win Rate by Team = 
+VAR SelectedTeam = SELECTEDVALUE(dim_teams[team_name])
+VAR WinsAsTeam1 = 
+    CALCULATE(
+        COUNTROWS(fact_matches),
+        fact_matches[team1] = SelectedTeam,
+        fact_matches[score1] > fact_matches[score2]
+    )
+VAR WinsAsTeam2 = 
+    CALCULATE(
+        COUNTROWS(fact_matches),
+        fact_matches[team2] = SelectedTeam,
+        fact_matches[score2] > fact_matches[score1]
+    )
+VAR TotalMatches = 
+    CALCULATE(
+        COUNTROWS(fact_matches),
+        fact_matches[team1] = SelectedTeam || fact_matches[team2] = SelectedTeam
+    )
+RETURN DIVIDE(WinsAsTeam1 + WinsAsTeam2, TotalMatches)
+
+// ============================================
+// MEDIDAS DE ANFITRIONES
+// ============================================
+
+Host Win Rate = 
+VAR HostWins = CALCULATE(
+    COUNTROWS(fact_editions),
+    fact_editions[host_won] = TRUE()
+)
+VAR TotalEditions = COUNTROWS(fact_editions)
+RETURN DIVIDE(HostWins, TotalEditions)
+
+Avg Host Position = AVERAGE(fact_editions[host_position])
+
+// ============================================
+// MEDIDAS DE GOLEADORES
+// ============================================
+
+Top Scorer Goals = MAX(fact_editions[top_scorer_goals])
+
+Avg Goals Per Match Scorer = 
+DIVIDE(
+    SUM(fact_editions[top_scorer_goals]),
+    SUM(fact_editions[matches_count])
+)
